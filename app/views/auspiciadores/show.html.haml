@@ -1,0 +1,18 @@
+#region-auspiciadores.container
+  .region
+    .region-title
+      %h1= page_title!('auspiciador')
+
+  .region
+    %p
+      %b Logo:
+      = @auspiciador.logo
+    %p
+      %b Link:
+      = @auspiciador.link
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_auspiciador_path(@auspiciador), class: 'btn btn-success'
+    = link_to 'Regresar', auspiciadores_path, class: 'btn btn-warning'

@@ -1,7 +1,94 @@
-#region-Inicio.container
-  .region
-    .region-title
-      %h1= page_title!('index')
+- page_title!('Inicio')
+#region-slider.seccion.region-centro
+  .region-carousel
+    = render 'bootstrap3_carousel'
+  .region-flyers
+    .flyer
+      = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
+      %h3
+        + Fiesta de Inaguración
+    .flyer
+      = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
+      %h3
+        + Fiesta de Inaguración
 
+
+#region-auspiciadores.seccion.region-centro
   .region
-    %p Aquí va el contenido...
+
+#region-baila.seccion.region-derecha
+  .region-texto
+    %h2.titulo
+      Baila
+    %p
+      "ONE" by Bach nace de la principal inspiración de un grupo profesional
+      de jóvenes dedicados al negocio del entretenimiento los cuales a través
+      de 8 años de experiencia han llegado a posicionar la marca "BACH"
+      como la mejor opción en discotecas del sur chico. Para este verano
+      presentaremos una propuesta innovadora de disco-club al lado
+      de nuestro "main-room", la cual ha sido diseñada estratégicamente para
+      ofrecer un mejor confort a todos los clientes brindando nuevos
+      conceptos de fiestas, conciertos y espacios privados.
+  .region-media
+
+#region-la-discoteca.seccion.region-izquierda
+  .region-texto
+    %h2.titulo
+      La Discoteca
+    %p
+      Far far away, behind the word mountains, far from the countries Vokalia
+      and Consonantia, there live the blind texts. Separated they live in
+      Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+  .region-media
+    .foto
+      = image_tag '/assets/img-discoteca-one.jpg', class: 'img-responsive'
+    .foto
+      = image_tag '/assets/img-discoteca-one.jpg', class: 'img-responsive'
+    .foto
+      = image_tag '/assets/img-discoteca-one.jpg', class: 'img-responsive'
+
+#region-la-musica.seccion.region-derecha
+  .region-texto
+    %h2.titulo
+      La Música
+    %p
+      Far far away, behind the word mountains, far from the countries Vokalia
+      and Consonantia, there live the blind texts. Separated they live in
+      Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+  .region-media
+    == <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/113657903&amp;color=ff0000&amp;auto_play=false&amp;show_artwork=false"></iframe>
+
+#region-eventos-anteriores.seccion.region-izquierda
+  .region-texto
+    %h2.titulo
+      Eventos Anteriores
+    %p
+      Far far away, behind the word mountains, far from the countries Vokalia
+      and Consonantia, there live the blind texts. Separated they live in
+      Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+  .region-media
+
+#region-contacto.seccion.region-derecha
+  .region-texto
+    %h2.titulo
+      Contacto
+    %p
+      Far far away, behind the word mountains, far from the countries Vokalia
+      and Consonantia, there live the blind texts. Separated they live in
+      Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+  .region-media
+
+#region-ubicacion.seccion.region-izquierda
+  .region-texto
+    %h2.titulo
+      Ubicación
+    %p
+      Far far away, behind the word mountains, far from the countries Vokalia
+      and Consonantia, there live the blind texts. Separated they live in
+      Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+  .region-media
+
+#region-facebook.seccion.region-centro
+  #region-facebook
+    = render '/shared/facebook_js'
+    = render '/shared/facebook_like_box'

@@ -1,0 +1,28 @@
+
+#carousel-generic.carousel.evento
+
+  %ol.carousel-indicators
+    - @eventos.each_with_index do |evento, index|
+      - if index == 0
+        %li.active{:'data-target' => '#carousel-generic', :'data-evento-to' => index}
+      - else
+        %li{:'data-target' => '#carousel-generic', :'data-evento-to' => index}
+
+  .carousel-inner
+    - @eventos.each_with_index do |evento, index|
+      - if index == 0
+        .item.active
+          = image_tag evento.flyer_url(:full)
+          .carousel-caption
+            %p.caption
+              = evento.titulo
+      - else
+        .item
+          = image_tag evento.flyer_url(:full)
+          .carousel-caption
+            %p.caption
+              = evento.titulo
+
+  -#
+    = link_to content_tag(:span, '', class: 'icon-prev'), '#carousel-generic', :'data-evento' => 'prev'
+    = link_to content_tag(:span, '', class: 'icon-next'), '#carousel-generic', :'data-evento' => 'next'

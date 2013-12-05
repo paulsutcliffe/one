@@ -1,0 +1,10 @@
+%ul.menu-devise
+  - if current_usuario
+    %li
+      = link_to 'cerrar sesión', destroy_usuario_session_path, method: 'delete'
+  - else
+    %li
+      = link_to 'ingresa', new_usuario_session_path
+    |
+    %li
+      = link_to 'regístrate', new_usuario_registration_path

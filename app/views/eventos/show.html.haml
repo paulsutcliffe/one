@@ -1,0 +1,24 @@
+#region-eventos.container
+  .region
+    .region-title
+      %h1= page_title!('evento')
+
+  .region
+    %p
+      %b Titulo:
+      = @evento.titulo
+    %p
+      %b Flyer:
+      = @evento.flyer
+    %p
+      %b Fecha:
+      = @evento.fecha
+    %p
+      %b Link:
+      = @evento.link
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_evento_path(@evento), class: 'btn btn-success'
+    = link_to 'Regresar', eventos_path, class: 'btn btn-warning'

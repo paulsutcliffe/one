@@ -1,20 +1,58 @@
 header {
-  li a {
-    float: right;
+  .region-logo img { padding: 50px }
+  .menu-principal li {
+    display: block;
+    float: left;
+    font-size: 26px;
+    text-transform: uppercase;
+    line-height: 145%;
+    a {
+      color: red;
+      font-weight: 700;
+      font-size: 26px;
+      text-transform: uppercase;
+      &:hover { text-decoration: none; color: white; }
+    }
   }
-  border-bottom: 4px solid white;
+  .region-devise {
+    clear: left;
+    .menu-devise {
+      list-style: none outside none;
+      li { display: inline-block }
+    }
+  }
+  li a {
+    &:hover { color: red; text-decoration: none; }
+  }
 }
 
 body {
   background-color: #000;
 }
 
-.container {
-  float: none;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 45px;
-  .img-responsive {
-    margin: 0 auto;
-  }
+
+h2.titulo {
+  font-size: 26px;
+  text-transform: uppercase;
 }
+
+.region-izquierda {
+  h2.titulo { text-align: left  }
+  p { text-align: left  }
+}
+
+.region-derecha {
+  h2.titulo { text-align: right  }
+  p { text-align: right  }
+}
+
+#region-facebook {
+  @extend .region-iframe-responsive;
+}
+
+.fb-like-box {
+  width: 100% !important;
+  * {width: 100% !important}
+}
+
+

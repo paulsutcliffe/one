@@ -1,0 +1,9 @@
+%ul.menu-principal
+  %li
+    = link_to_unless(current_page?('/'), "Inicio", { action: "index" })
+  %li
+    = link_to '/La Discoteca', '#'
+  %li
+    = link_to '/Contacto', '#'
+  %li
+    = link_to '/Ubicación', '#'
