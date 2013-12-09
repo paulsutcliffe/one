@@ -46,6 +46,10 @@ h2.titulo {
   p { text-align: right  }
 }
 
+.region-carousel {
+  float: left;
+}
+
 #region-facebook {
   @extend .region-iframe-responsive;
 }
