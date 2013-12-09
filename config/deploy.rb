@@ -1,11 +1,10 @@
-#coding: utf-8
 require "bundler/capistrano"
 require "rvm/capistrano"
 
 set :rvm_ruby_string, '1.9.3'
 set :rvm_type, :user  # Don't use system-wide RVM
 
-server "one.kosmyka.com", :web, :app, :db, primary: true
+server "rubyonrailsperu.com", :web, :app, :db, primary: true
 
 set :application, "one"
 set :user, "paul"
@@ -47,6 +46,7 @@ namespace :deploy do
 
     run "mysql --user=root --password=#{root_password} -e \"CREATE DATABASE IF NOT EXISTS #{db_name}\""
     run "mysql --user=root --password=#{root_password} -e \"GRANT ALL PRIVILEGES ON #{db_name}.* TO '#{db_user}'@'localhost' IDENTIFIED BY '#{db_pass}' WITH GRANT OPTION\""
+
   end
 
   task :setup_config, roles: :app do
@@ -55,8 +55,6 @@ namespace :deploy do
     end
     sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
     sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
-    run "cd /var/www/#{application}/current/"
-    run "bundle install --binstubs"
   end
   before "deploy:cold", "deploy:create_database"
   after "deploy:cold", "deploy:setup_config"
