@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131205031329) do
+ActiveRecord::Schema.define(:version => 20131209185657) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -75,6 +75,11 @@ ActiveRecord::Schema.define(:version => 20131205031329) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
   end
 
   add_index "usuarios", ["email"], :name => "index_usuarios_on_email", :unique => true

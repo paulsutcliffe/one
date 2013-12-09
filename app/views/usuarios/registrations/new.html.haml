@@ -1,17 +1,30 @@
-%h2 Sign up
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  %div
-    = f.label :email
-    %br/
-    = f.email_field :email, :autofocus => true
-  %div
-    = f.label :password
-    %br/
-    = f.password_field :password
-  %div
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation
-  %div= f.submit "Sign up"
-= render "usuarios/shared/links"
+#region-admin.container
+
+  .region
+    .region-title
+      %h1= page_title!('Registrarse')
+
+  .region
+    = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+      = devise_error_messages!
+      .form-group
+        = f.label :email, class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.email_field :email, :autofocus => true, class: 'form-control'
+      .form-group
+        = f.label :password, "contraseña", class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.password_field :password, class: 'form-control'
+      .form-group
+        = f.label :password_confirmation, "Confirmar Contraseña", class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.password_field :password_confirmation, class: 'form-control'
+      .form-group
+        = f.label :name, "Nombre", class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.text_field :name, class: 'form-control'
+
+
+      .admin-controls
+        %div= f.submit "Registrarse", class: 'btn btn-default'
+  = render "usuarios/shared/links"

@@ -1,7 +1,7 @@
 %ul.menu-devise
   - if current_usuario
     %li
-      = link_to 'cerrar sesión', destroy_usuario_session_path, method: 'delete'
+      = link_to 'cerrar sesión', destroy_usuario_session_path, method: 'delete', id: 'sign_out'
   - else
     %li
       = link_to 'ingresa', new_usuario_session_path

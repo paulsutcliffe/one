@@ -12,7 +12,9 @@
  *
  */
 @import 'bootstrap';
-@import 'compass';
+@import 'compass/css3';
+@import 'compass/utilities/sprites';
+@import 'compass/typography';
 
 @import 'mixins.css.scss';
 @import 'variables.css.scss';

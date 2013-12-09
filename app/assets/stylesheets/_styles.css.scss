@@ -59,4 +59,25 @@ h2.titulo {
   * {width: 100% !important}
 }
 
+/* ICONS */
+$icons-sprite-dimensions: true;
+@import 'icons/*.png';
+@include all-icons-sprites;
 
+#region-contacto {
+  i.icon {
+    display: block; margin-left: 10px;
+    &.avion {@include icons-sprite(avion)}
+    &.iphone {@include icons-sprite(iphone)}
+    &.ubicacion {@include icons-sprite(ubicacion)}
+  }
+}
+
+#region-ubicacion {
+  i.icon {
+    display: block; margin-right: 10px;
+    &.mapa {@include icons-sprite(mapa)}
+    &.persona {@include icons-sprite(persona)}
+    &.tarjeta {@include icons-sprite(tarjeta)}
+  }
+}

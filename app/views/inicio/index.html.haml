@@ -3,14 +3,11 @@
   .region-carousel
     = render 'bootstrap3_carousel'
   .region-flyers
-    .flyer
-      = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
-      %h3
-        + Fiesta de Inaguración
-    .flyer
-      = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
-      %h3
-        + Fiesta de Inaguración
+    - @eventos.each do |evento|
+      .flyer
+        = link_to image_tag(evento.flyer_url(:thumb), class: 'img-responsive')
+        %h3
+          = evento.titulo
 
 
 #region-auspiciadores.seccion.region-centro
@@ -86,11 +83,11 @@
   .region-texto
     %h2.titulo
       Contacto
-    %p
-      Far far away, behind the word mountains, far from the countries Vokalia
-      and Consonantia, there live the blind texts. Separated they live in
-      Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+    %i.icon-avion info@onebybach.com
+    %i.icon-iphone 437.6825
+    %i.icon-ubicacion av. El Polo 495 Of. 401 Surco
   .region-media
+    = render '/contactos/form'
 
 #region-ubicacion.seccion.region-izquierda
   .region-texto
