@@ -39,6 +39,7 @@ gem "capistrano"
 
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'koala'
 
 gem "bootstrap-sass", "~> 3.0.2.1"
 gem "sass-rails", "~> 3.2.6"
