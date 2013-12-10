@@ -1,0 +1,25 @@
+#region-usuarios.container
+
+  .region
+    .region-title
+      %h1= page_title!('Listando usuarios')
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Nombre
+            %th Email
+            %th Provider
+            %th Ultima fecha de logeo
+            %th Fecha de Registro
+            %th
+
+
+          - @usuarios.each do |usuario|
+            %tr
+              %td= usuario.name
+              %td= usuario.email
+              %td= usuario.provider if usuario.provider
+              %td= l usuario.last_sign_in_at, format: :short if usuario.last_sign_in_at
+              %td= l usuario.created_at, format: :short
+              %td= link_to 'Eliminar', usuario, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
