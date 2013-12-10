@@ -116,3 +116,13 @@
   #region-facebook
     = render '/shared/facebook_js'
     = render '/shared/facebook_like_box'
+
+#region-footer.seccion.region-centro
+  .copyright
+    = 'ONE by Bach Todos los Derechos Reservados ' + Time.now.year.to_s
+  .twitter-like
+    = render '/shared/twitter_follow'
+  .facebook-like
+    = render '/shared/like_buttom'
+  .logo-facebook
+    = image_tag '/assets/logo-facebook.png'
