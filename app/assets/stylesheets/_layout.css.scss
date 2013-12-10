@@ -7,21 +7,152 @@
 
 .seccion {
  .region-texto {
-   @extend .col-lg-3;
-   @extend .col-lg-offset-1;
-   @extend .col-lg-push-8;
-   @extend .col-sm-4;
-   @extend .col-sm-offset-4;
+
  }
  .region-media {
-   @extend .col-lg-8;
-   @extend .col-lg-pull-4;
-   @extend .col-sm-12;
+   
  }
+}
+
+[id^="region-"],[class^="seccion-"], .region-section {
+  @extend .clearfix;
+}
+
+.region-menu {margin-bottom: 5px}
+.region-devise {margin-bottom: 30px}
+[id^="region-"], .region-section {
+  margin-bottom: 160px;
 }
 
 .region-media {
   .foto {
     @extend .col-md-4;
   }
+}
+
+#main-header.sticky {
+  .region-logo {
+    @extend .col-lg-3;
+    @extend .col-md-3;
+    @extend .col-sm-3;
+    @extend .col-xs-3;
+  }
+  nav {
+    @extend .col-lg-9;
+    @extend .col-md-9;
+    @extend .col-sm-9;
+    @extend .col-xs-9;
+    margin-top: 70px;
+  }
+}
+
+#region-slider {
+  .region-carousel {
+    @extend .col-lg-9;
+    @extend .col-md-9;
+    @extend .col-sm-9;
+    @extend .col-xs-9;
+  }
+
+  .region-flyers {
+    @extend .col-lg-3;
+    @extend .col-md-3;
+    @extend .col-sm-3;
+    @extend .col-xs-3;
+  }
+}
+
+
+.media-region {
+  .item-texto {
+    @extend .col-lg-4;
+    @extend .col-md-4;
+    @extend .col-sm-4;
+    @extend .col-xs-4;
+  }
+  .item-foto {
+    @extend .col-lg-2;
+    @extend .col-md-2;
+    @extend .col-sm-2;
+    @extend .col-xs-2;
+  }
+
+  .item-tab {
+    @extend .col-lg-offset-2;
+    @extend .col-md-offset-2;
+    @extend .col-sm-offset-2;
+    @extend .col-xs-offset-2;
+  }
+
+  .item-iframe {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-6;
+  }
+
+  .item-flyer {
+    @extend .col-lg-3;
+    @extend .col-md-3;
+    @extend .col-sm-3;
+    @extend .col-xs-3;
+
+    img {width: 100%}
+  }
+}
+
+#ubicacion {
+  .item-texto {
+    @extend .col-lg-4;
+    @extend .col-md-4;
+    @extend .col-sm-4;
+    @extend .col-xs-4;
+  }
+
+  .item-mapa {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-6;
+
+    @extend .col-lg-offset-2;
+    @extend .col-md-offset-2;
+    @extend .col-sm-offset-2;
+    @extend .col-xs-offset-2;
+    
+    img {width: 100%}
+
+  }
+
+
+
+}
+
+#contacto {
+  .region-contact-info {
+    @extend .col-lg-4;
+    @extend .col-md-4;
+    @extend .col-sm-4;
+    @extend .col-xs-4;
+
+    * {
+      text-align: right;
+    }
+    li {@extend .clearfix; list-style: none; margin-bottom: 15px} 
+  }
+
+  .region-form {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-6;
+  }
+
+  fieldset {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-6;
+  }
+
 }

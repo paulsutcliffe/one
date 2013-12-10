@@ -1,6 +1,7 @@
 .seccion.region-logo
   = image_tag '/assets/logo-one.jpg', class: 'img-responsive'
-.seccion.region-menu
-  = render 'layouts/navigation_links'
-.seccion.region-devise
-  = render 'layouts/devise_links'
+%nav
+  .seccion.region-menu.menu-principal-wrapper
+    = render 'layouts/navigation_links'
+  .seccion.region-devise
+    = render 'layouts/devise_links'

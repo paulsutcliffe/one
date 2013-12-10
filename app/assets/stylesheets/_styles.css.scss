@@ -46,9 +46,9 @@ h2.titulo {
   p { text-align: right  }
 }
 
-.region-carousel {
-  float: left;
-}
+.menu-principal, .menu-devise {margin: 0; padding: 0}
+
+#main-header.sticky {position: fixed; width: 100%; z-index: 100; background: black}
 
 #region-facebook {
   @extend .region-iframe-responsive;
@@ -61,19 +61,19 @@ h2.titulo {
 
 /* ICONS */
 $icons-sprite-dimensions: true;
-@import 'icons/*.png';
+@import 'icons/*.png'; /* */
 @include all-icons-sprites;
 
-#region-contacto {
+#contacto {
   i.icon {
-    display: block; margin-left: 10px;
+    display: block; margin-left: 10px; float: right;
     &.avion {@include icons-sprite(avion)}
     &.iphone {@include icons-sprite(iphone)}
     &.ubicacion {@include icons-sprite(ubicacion)}
   }
 }
 
-#region-ubicacion {
+#ubicacion {
   i.icon {
     display: block; margin-right: 10px;
     &.mapa {@include icons-sprite(mapa)}
@@ -81,3 +81,15 @@ $icons-sprite-dimensions: true;
     &.tarjeta {@include icons-sprite(tarjeta)}
   }
 }
+
+.form-inline .form-group {margin-bottom: 15px}
+textarea {resize: vertical; height: 160px; min-height: 160px}
+
+
+.btn-default {background: $red; border: 0; text-align: center; border-radius: 0; padding: 7px 20px; color: white; text-shadow: 0 0 0 none}
+
+.item-flyer,
+.actions {
+  .btn-default {float: right}
+}
+

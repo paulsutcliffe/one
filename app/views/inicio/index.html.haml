@@ -1,5 +1,5 @@
 - page_title!('Inicio')
-#region-slider.seccion.region-centro
+#region-slider
   .region-carousel
     = render 'bootstrap3_carousel'
   .region-flyers
@@ -13,8 +13,8 @@
 #region-auspiciadores.seccion.region-centro
   .region
 
-#region-baila.seccion.region-derecha
-  .region-texto
+#region-baila.media-region
+  .item-texto
     %h2.titulo
       Baila
     %p
@@ -26,78 +26,91 @@
       de nuestro "main-room", la cual ha sido diseñada estratégicamente para
       ofrecer un mejor confort a todos los clientes brindando nuevos
       conceptos de fiestas, conciertos y espacios privados.
-  .region-media
-    .foto
-      = image_tag '/assets/img-baila1.jpg', class: 'img-responsive'
-    .foto
-      = image_tag '/assets/img-baila2.jpg', class: 'img-responsive'
-    .foto
-      = image_tag '/assets/img-baila3.jpg', class: 'img-responsive'
+ 
+  .item-foto
+    = image_tag '/assets/img-baila1.jpg', class: 'img-responsive'
+  .item-foto
+    = image_tag '/assets/img-baila2.jpg', class: 'img-responsive'
+  .item-foto
+    = image_tag '/assets/img-baila3.jpg', class: 'img-responsive'
 
-#region-la-discoteca.seccion.region-izquierda
-  .region-texto
+
+%section#la-discoteca.region-section.media-region
+  .item-foto.item-tab
+    = image_tag '/assets/img-discoteca1.jpg', class: 'img-responsive'
+  .item-foto
+    = image_tag '/assets/img-discoteca2.jpg', class: 'img-responsive'
+  .item-foto
+    = image_tag '/assets/img-discoteca3.jpg', class: 'img-responsive'
+
+  .item-texto
     %h2.titulo
       La Discoteca
     %p
       Far far away, behind the word mountains, far from the countries Vokalia
       and Consonantia, there live the blind texts. Separated they live in
       Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-  .region-media
-    .foto
-      = image_tag '/assets/img-discoteca1.jpg', class: 'img-responsive'
-    .foto
-      = image_tag '/assets/img-discoteca2.jpg', class: 'img-responsive'
-    .foto
-      = image_tag '/assets/img-discoteca3.jpg', class: 'img-responsive'
 
-#region-la-musica.seccion.region-derecha
-  .region-texto
+
+#region-musica.media-region
+  .item-texto
     %h2.titulo
       La Música
     %p
       Far far away, behind the word mountains, far from the countries Vokalia
       and Consonantia, there live the blind texts. Separated they live in
       Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-  .region-media
+  .item-iframe
     == <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/113657903&amp;color=ff0000&amp;auto_play=false&amp;show_artwork=false"></iframe>
 
-#region-eventos-anteriores.seccion.region-izquierda
-  .region-texto
+#region-eventos-anteriores.media-region
+
+  .item-flyer.item-tab
+    = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
+    %h3
+      + Fiesta de Inaguración
+  .item-flyer
+    = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
+    %h3
+      + Fiesta de Inaguración
+    = link_to 'Ver más', '', class: 'btn-default'
+
+  .item-texto
     %h2.titulo
       Eventos Anteriores
     %p
       Far far away, behind the word mountains, far from the countries Vokalia
       and Consonantia, there live the blind texts. Separated they live in
       Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-  .region-flyers
-    .flyer
-      = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
-      %h3
-        + Fiesta de Inaguración
-    .flyer
-      = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
-      %h3
-        + Fiesta de Inaguración
-
-#region-contacto.seccion.region-derecha
-  .region-texto
+    
+%section#contacto.region-section
+  %address.region-contact-info
     %h2.titulo
       Contacto
-    %i.icon-avion info@onebybach.com
-    %i.icon-iphone 437.6825
-    %i.icon-ubicacion av. El Polo 495 Of. 401 Surco
-  .region-media
+    %ul
+      %li
+        info@onebybach.com
+        %i.icon.avion 
+      %li
+        437.6825
+        %i.icon.iphone 
+      %li
+        av. El Polo 495 Of. 401 Surco
+        %i.icon.ubicacion 
+
+  .region-form
     = render '/contactos/form'
 
-#region-ubicacion.seccion.region-izquierda
-  .region-texto
+%section#ubicacion.region-section
+  .item-mapa
+    = image_tag 'img-mapa.jpg'
+  .item-texto
     %h2.titulo
       Ubicación
     %p
       Far far away, behind the word mountains, far from the countries Vokalia
       and Consonantia, there live the blind texts. Separated they live in
       Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-  .region-media
 
 #region-facebook.seccion.region-centro
   #region-facebook
