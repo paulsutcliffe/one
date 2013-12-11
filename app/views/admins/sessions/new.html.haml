@@ -5,7 +5,7 @@
       %h1= page_title!('Ingresar')
 
   .region
-    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { class: 'form-horizontal' }) do |f|
       .form-group
         = f.label :email, class: 'col-sm-2 control-label'
         .col-sm-10
