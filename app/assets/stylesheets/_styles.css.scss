@@ -30,7 +30,7 @@ body {
   background-color: #000;
 }
 
-a:hover, a:focus {color: $red}
+a:hover, a:focus {color: $red; }
 
 
 h2.titulo {
@@ -133,8 +133,10 @@ $icons-sprite-dimensions: true;
 textarea {resize: vertical; height: 160px; min-height: 160px}
 
 
-.btn-default {background: $red; border: 0; text-align: center; border-radius: 0; padding: 7px 20px; color: white; text-shadow: 0 0 0 none; text-transform: uppercase;
-  &:hover, &:focus {background: $red; text-decoration: none}
+.btn-default {
+  background: $red; border: 0; text-align: center; border-radius: 0; 
+  padding: 7px 20px; color: white; text-shadow: 0 0 0 none; text-transform: uppercase;
+  &:hover, &:focus {background: darken($red, 5%); text-decoration: none; color: white}
 }
 
 .item-flyer,
