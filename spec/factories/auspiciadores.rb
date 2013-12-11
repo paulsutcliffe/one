@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :auspiciador do
-    logo "MyString"
-    link "MyString"
+    logo { Rack::Test::UploadedFile.new(File.join(Rails.root,'spec','support','logo.png'))}
+    link "http://www.kosmyka.com"
   end
 end

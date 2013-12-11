@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :mix do
-    soundcloud_link "MyString"
+    soundcloud_link "https://soundcloud.com/deejaytea/dj-t-s-ibiza-2013-mix"
   end
 end

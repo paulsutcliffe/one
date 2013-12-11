@@ -1,3 +1,3 @@
 class EventosController < InheritedResources::Base
-  before_filter :authenticate_admin!, except: [:index]
+  before_filter :authenticate_admin!
 end
