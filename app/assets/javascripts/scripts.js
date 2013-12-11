@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 
   $(document).on('click', '.menu-principal a', function() {
-    $('html, body').animate({scrollTop: $(this.hash).offset().top - 300})
+    $('html, body').animate({scrollTop: $(this.hash).offset().top - 90})
     return false; 
   });
 
@@ -17,10 +17,13 @@ $(document).scroll(function() {
 function header_class() {
   dista = $(document).scrollTop();
   header = $('#main-header');
+  main = $('#main');
 
   if (dista > 400) {
     header.addClass('sticky');
+    main.addClass('under-sticky');
   } else {
     header.removeClass('sticky');
+    main.removeClass('under-sticky');
   }
 }

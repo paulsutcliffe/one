@@ -48,7 +48,15 @@ h2.titulo {
 
 .menu-principal, .menu-devise {margin: 0; padding: 0}
 
-#main-header.sticky {position: fixed; width: 100%; z-index: 100; background: black}
+#one {@extend .clearfix}
+#main-header {@extend .clearfix /*position: fixed*/}
+#main-header.sticky {position: fixed; top: 0; width: 100%; z-index: 100; background: orange; height: 80px;
+  .region-logo img {padding-top: 0; padding-bottom: 0; width: 200px}
+  nav {margin-top: 10px}  
+  .region-devise {margin-bottom: 0}
+}
+
+#main.under-sticky {margin-top: 367px}
 
 #region-facebook {
   @extend .region-iframe-responsive;
