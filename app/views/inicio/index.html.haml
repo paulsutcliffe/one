@@ -65,15 +65,17 @@
 
 #region-eventos-anteriores.media-region
 
-  .item-flyer.item-tab
-    = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
-    %h3
-      + Fiesta de Inaguración
-  .item-flyer
-    = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
-    %h3
-      + Fiesta de Inaguración
-    = link_to 'Ver más', '', class: 'btn-default'
+  .item-flyers.item-tab
+    .row
+      .item-flyer
+        = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
+        %h3
+          + Fiesta de Inaguración
+      .item-flyer
+        = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
+        %h3
+          + Fiesta de Inaguración
+        = link_to 'Ver más', '', class: 'btn-default'
 
   .item-texto
     %h2.titulo
