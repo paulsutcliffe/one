@@ -9,6 +9,7 @@ $(document).ready(function() {
   $('body').scrollspy({ target: '.menu-principal-wrapper', offset: 100 })
   
   header_class();
+  if_window_gt_1500();
 });
 
 $(document).scroll(function() {
@@ -28,3 +29,21 @@ function header_class() {
     main.removeClass('under-sticky');
   }
 }
+
+
+function if_window_gt_1500() {
+  cont = $('.if-mega-container');
+  row= $('.if-mega-row');
+  ancho = $(window).width();
+  if (ancho > 1500) {
+    cont.addClass('container');
+    row.addClass('row');
+  } else {
+    cont.removeClass('container');
+    row.removeClass('row');    
+  } 
+}
+
+$(document).on('resize', function() {
+  if_window_gt_1500();
+});
