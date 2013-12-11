@@ -3,5 +3,6 @@ class InicioController < ApplicationController
     @eventos = Evento.limit(2)
     @contacto = Contacto.new
     @auspiciadores = Auspiciador.all
+    @mix = Mix.limit(1)
   end
 end

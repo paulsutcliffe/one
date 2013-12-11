@@ -6,6 +6,8 @@ class Usuario < ActiveRecord::Base
 
   devise :omniauthable, :omniauth_providers => [:facebook]
 
+  default_scope  { order("created_at DESC") }
+
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid, :name
   # attr_accessible :title, :body
