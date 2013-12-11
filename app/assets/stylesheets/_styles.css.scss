@@ -73,6 +73,9 @@ h2.titulo {
 .nav > li > a:hover, .nav > li > a:focus {background-color: transparent}
 
 
+h3.title {text-transform: uppercase; padding: 10px 0 20px; font-size: 18px}
+
+
 #one {@extend .clearfix}
 #main-header {@extend .clearfix /*position: fixed*/}
 #main-header.sticky {position: fixed; top: 0; width: 100%; z-index: 100; background: black; height: 80px; border-bottom: 1px solid white;
@@ -115,14 +118,25 @@ $icons-sprite-dimensions: true;
   }
 }
 
+#carousel-generic {
+  .carousel-indicators {
+    text-align: right; 
+    margin: 0; position: absolute; bottom: 50px; right: 0; width: auto;
+  }
+}
+
 .form-inline .form-group {margin-bottom: 15px}
 textarea {resize: vertical; height: 160px; min-height: 160px}
 
 
-.btn-default {background: $red; border: 0; text-align: center; border-radius: 0; padding: 7px 20px; color: white; text-shadow: 0 0 0 none}
+.btn-default {background: $red; border: 0; text-align: center; border-radius: 0; padding: 7px 20px; color: white; text-shadow: 0 0 0 none; text-transform: uppercase;
+  &:hover, &:focus {background: $red; text-decoration: none}
+}
 
 .item-flyer,
 .actions {
   .btn-default {float: right}
 }
+
+.btn-default.yo-voy {position: absolute; top: 15px; right: 30px; z-index: 200}
 
