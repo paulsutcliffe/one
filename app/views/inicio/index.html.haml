@@ -14,9 +14,11 @@
 
 
 #region-auspiciadores.seccion.region-centro
-  .region
-    - @auspiciadores.each do |auspiciador|
-      = link_to image_tag(auspiciador.logo_url(:thumb), class: 'img-responsive'), auspiciador.link
+  .region.item-aus-wrapper
+    .row
+      - @auspiciadores.each do |auspiciador|
+        .item-aus
+          = link_to image_tag(auspiciador.logo_url(:thumb), class: 'img-responsive'), auspiciador.link, target: '_blank'
 
 #region-baila.media-region
   .item-texto
@@ -116,16 +118,18 @@
       Ubicación
     %ul
       %li
+        %i.icon.mapa
         Km. 52 Antigua Panamericana Sur
         San Bartolo (Al costado de Bach)
-        %i.icon.mapa
+        
       %li
-        Mayores de 21 años
         %i.icon.persona
+        Mayores de 21 años
+        
       %li
-        Aceptamos Visa y MasterCard
         %i.icon.tarjeta
-
+        Aceptamos Visa y MasterCard
+        
 
 #region-facebook.seccion.region-centro
   #region-facebook

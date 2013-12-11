@@ -82,6 +82,29 @@
   }
 }
 
+#region-auspiciadores {
+  .item-aus-wrapper {
+    @extend .col-lg-10;
+    @extend .col-md-10;
+    @extend .col-sm-10;
+    @extend .col-xs-10;
+
+    @extend .col-lg-offset-2;
+    @extend .col-md-offset-2;
+    @extend .col-sm-offset-2;
+    @extend .col-xs-offset-2;
+
+  }
+  .item-aus {
+    @extend .col-lg-2;
+    @extend .col-md-2;
+    @extend .col-sm-6;
+    @extend .col-xs-6;
+    float: right;
+    img {width: 100%}
+  }
+}
+
 
 .media-region {
   .item-texto {
@@ -134,6 +157,10 @@
     @extend .col-md-4;
     @extend .col-sm-4;
     @extend .col-xs-4;
+
+    ul {
+      padding: 0; li {list-style: none; overflow: hidden; margin-bottom: 15px; i {float: left}}
+    }
   }
 
   .item-mapa {
@@ -148,7 +175,6 @@
     @extend .col-xs-offset-2;
     
     img {width: 100%}
-
   }
 
 
