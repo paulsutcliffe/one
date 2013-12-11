@@ -35,7 +35,7 @@ function if_window_gt_1500() {
   cont = $('.if-mega-container');
   row= $('.if-mega-row');
   ancho = $(window).width();
-  if (ancho > 1500) {
+  if (ancho > 1600) {
     cont.addClass('container');
     row.addClass('row');
   } else {
