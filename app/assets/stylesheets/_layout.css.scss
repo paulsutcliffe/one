@@ -1,3 +1,21 @@
+
+@media (min-width: 1500px) {
+  .if-mega-container {@extend .container; margin: 0 auto}
+
+  .if-mega-row {
+      margin-left: -15px;
+      margin-right: -15px;
+  }
+  .if-mega-row:before, .row:after {
+      content: " ";
+      display: table;
+  }
+  .if-mega-row:after {
+      clear: both;
+  }
+}
+
+
 .seccion {
   @extend .col-lg-12;
   @extend .col-md-12;

@@ -31,8 +31,8 @@
     = favicon_link_tag '/ico/apple-touch-icon-57x57-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png'
     = favicon_link_tag '/ico/favicon.png', :rel => 'shortcut icon'
   %body{:"data-spy" => "scroll", :"data-target" => ".menu-principal-wrapper"}
-    .container
-      .row
+    .if-mega-container
+      .if-mega-row
         #one
         %header#main-header
           = render 'layouts/navigation'
