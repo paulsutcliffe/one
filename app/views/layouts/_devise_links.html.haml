@@ -1,14 +1,15 @@
 %ul.menu-devise
-  - if current_usuario
-    %li
-      = link_to 'cerrar sesión', destroy_usuario_session_path, method: 'delete', id: 'sign_out'
-  - else
-    %li
-      = link_to 'ingresa', new_usuario_session_path
-    |
-    %li
-      = link_to 'regístrate', new_usuario_registration_path
   - if current_admin
-    |
     %li
       = link_to 'cerrar sesión de administrador', destroy_admin_session_path, method: 'delete'
+  - else
+    - if current_usuario
+      %li
+        = link_to 'cerrar sesión', destroy_usuario_session_path, method: 'delete', id: 'sign_out'
+    - else
+      %li
+        = link_to 'ingresa', new_usuario_session_path
+      |
+      %li
+        = link_to 'regístrate', new_usuario_registration_path
+

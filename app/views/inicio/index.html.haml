@@ -10,7 +10,8 @@
       .flyer
         = link_to image_tag(evento.flyer_url(:thumb), class: 'img-responsive')
         %h3.title
-          = '+ ' + evento.titulo + ' / ' + evento.fecha.to_s
+          = '+ ' + evento.titulo + ' / ' 
+          = l evento.fecha, format: :supershort
 
 
 #region-auspiciadores.seccion.region-centro
