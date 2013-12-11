@@ -14,12 +14,12 @@
         .item.active
           = image_tag evento.flyer_url(:full)
           %h3.title
-            = evento.titulo
+            = '+ ' + evento.titulo
       - else
         .item
           = image_tag evento.flyer_url(:full)
           %h3.title
-            = evento.titulo
+            = '+ ' + evento.titulo
 
   -#
     = link_to content_tag(:span, '', class: 'icon-prev'), '#carousel-generic', :'data-evento' => 'prev'

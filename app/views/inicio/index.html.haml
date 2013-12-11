@@ -10,7 +10,7 @@
       .flyer
         = link_to image_tag(evento.flyer_url(:thumb), class: 'img-responsive')
         %h3.title
-          = evento.titulo + ' / ' + evento.fecha.to_s
+          = '+ ' + evento.titulo + ' / ' + evento.fecha.to_s
 
 
 #region-auspiciadores.seccion.region-centro
@@ -121,15 +121,15 @@
         %i.icon.mapa
         Km. 52 Antigua Panamericana Sur
         San Bartolo (Al costado de Bach)
-        
+
       %li
         %i.icon.persona
         Mayores de 21 años
-        
+
       %li
         %i.icon.tarjeta
         Aceptamos Visa y MasterCard
-        
+
 
 #region-facebook.seccion.region-centro
   #region-facebook
