@@ -4,6 +4,9 @@
     .region-title
       %h1= page_title!('Ingresar')
   .region
+    = link_to image_tag('/assets/img-facebook-round.png'), usuario_omniauth_authorize_path(provider: 'facebook')
+    = link_to "Iniciar sesión con mi cuenta de Facebook", usuario_omniauth_authorize_path(provider: 'facebook')
+    .region
     = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
       .form-group
         = f.label :email, class: 'col-sm-2 control-label'

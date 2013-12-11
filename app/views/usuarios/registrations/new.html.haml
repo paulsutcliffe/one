@@ -3,6 +3,9 @@
   .region
     .region-title
       %h1= page_title!('Registrarse')
+  .region
+    = link_to image_tag('/assets/img-facebook-round.png'), usuario_omniauth_authorize_path(provider: 'facebook')
+    = link_to "Regístrate con tu cuenta de Facebook", usuario_omniauth_authorize_path(provider: 'facebook')
 
   .region
     = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
