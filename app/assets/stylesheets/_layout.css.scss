@@ -46,6 +46,22 @@
   }
 }
 
+#main-footer {
+  .copyright {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-6;
+  }
+  .footer-item {
+    @extend .col-lg-2;
+    @extend .col-md-2;
+    @extend .col-sm-2;
+    @extend .col-xs-2;
+    text-align: right;
+  }
+}
+
 #region-slider {
   .region-carousel {
     @extend .col-lg-9;

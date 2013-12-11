@@ -6,7 +6,8 @@ $(document).ready(function() {
     return false; 
   });
 
-  jQuery('.menu-principal-wrapper').scrollspy();
+  $('body').scrollspy({ target: '.menu-principal-wrapper', offset: 100 })
+  
   header_class();
 });
 

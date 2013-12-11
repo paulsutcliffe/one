@@ -47,10 +47,35 @@ h2.titulo {
 }
 
 .menu-principal, .menu-devise {margin: 0; padding: 0}
+#main-footer.region-section {
+  margin-bottom: 10px; float: left; clear: left; width: 100%
+}
+
+#region-musica,
+#region-baila {
+  .item-texto {
+    * {
+      text-align: right;
+    }
+  }
+}
+.nav-tabs {border-bottom: 0}
+.nav-tabs > li > a {
+  border-radius: 0; border: 0; background: transparent
+}
+.nav > li > a {
+  padding: 0; 
+}
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover, 
+.nav-tabs > li.active > a:focus {background-color: transparent; border: 0; color: white}
+
+.nav > li > a:hover, .nav > li > a:focus {background-color: transparent}
+
 
 #one {@extend .clearfix}
 #main-header {@extend .clearfix /*position: fixed*/}
-#main-header.sticky {position: fixed; top: 0; width: 100%; z-index: 100; background: orange; height: 80px;
+#main-header.sticky {position: fixed; top: 0; width: 100%; z-index: 100; background: black; height: 80px; border-bottom: 1px solid white;
   .region-logo img {padding-top: 0; padding-bottom: 0; width: 200px}
   nav {margin-top: 10px}  
   .region-devise {margin-bottom: 0}
