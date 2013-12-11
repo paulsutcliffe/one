@@ -1,9 +1,23 @@
 %ul.menu-principal.nav.nav-tabs
-  %li
-    = link_to 'Inicio', '#one'
-  %li
-    = link_to '/La Discoteca', '#la-discoteca'
-  %li
-    = link_to '/Contacto', '#contacto'
-  %li
-    = link_to '/Ubicación', '#ubicacion'
+  - if current_admin
+    %Li
+      = link_to 'Inicio', root_path
+    %li
+      = link_to '/Auspiciadores', auspiciadores_path
+    %li
+      = link_to '/Eventos', eventos_path
+    %li
+      = link_to '/Mixes', mixes_path
+    %li
+      = link_to '/Mensajes', contactos_path
+    %li
+      = link_to '/Usuarios', usuarios_path
+  - else
+    %li
+      = link_to 'Inicio', '#one'
+    %li
+      = link_to '/La Discoteca', '#la-discoteca'
+    %li
+      = link_to '/Contacto', '#contacto'
+    %li
+      = link_to '/Ubicación', '#ubicacion'

@@ -2,12 +2,7 @@
 
   .region
     .region-title
-      %h1= page_title!('Listando contactos')
-
-    .region
-      - if current_admin
-        .admin-control
-          = link_to 'Crear Contacto', new_contacto_path, class: 'btn btn-primary'
+      %h1= page_title!('Listando Mensajes')
 
       .table-responsive
         %table.table
