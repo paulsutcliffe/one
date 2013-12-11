@@ -15,3 +15,4 @@
 //= require bootstrap
 //= require scripts.js
 //= require inicio.js.coffee
+//= require facebook.js.coffee.erb
