@@ -151,6 +151,14 @@
   }
 }
 
+.flash-wrapper {
+
+    @extend .col-lg-12;
+    @extend .col-md-12;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+}
+
 #ubicacion {
   .item-texto {
     @extend .col-lg-4;
@@ -176,8 +184,6 @@
     
     img {width: 100%}
   }
-
-
 
 }
 

@@ -30,6 +30,8 @@ body {
   background-color: #000;
 }
 
+a:hover, a:focus {color: $red}
+
 
 h2.titulo {
   font-size: 26px;
@@ -72,7 +74,7 @@ h2.titulo {
 
 .nav > li > a:hover, .nav > li > a:focus {background-color: transparent}
 
-
+#region-slider {margin-bottom: 50px}
 h3.title {text-transform: uppercase; padding: 10px 0 20px; font-size: 18px}
 
 
@@ -139,5 +141,9 @@ textarea {resize: vertical; height: 160px; min-height: 160px}
   .btn-default {float: right}
 }
 
+
+.item-flyers {
+  .btn-default {float: right; margin-right: 15px}
+}
 .btn-default.yo-voy {position: absolute; top: 15px; right: 30px; z-index: 200}
 
