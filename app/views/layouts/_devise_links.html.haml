@@ -8,3 +8,7 @@
     |
     %li
       = link_to 'regístrate', new_usuario_registration_path
+  - if current_admin
+    |
+    %li
+      = link_to 'cerrar sesión de administrador', destroy_admin_session_path, method: 'delete'
