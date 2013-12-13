@@ -12,17 +12,21 @@
     - @eventos.each_with_index do |evento, index|
       - if index == 0
         .item.active
+          - if @lista_evento_viernes
+            = link_to 'Mi lista', lista_path(@lista_evento_viernes), class: 'btn-default yo-voy'
+          - else
+            = link_to 'Hacer lista', new_evento_lista_path(evento), class: 'btn-default yo-voy'
           = image_tag evento.flyer_url(:full)
           %h3.title
             = '+ ' + evento.titulo + ' /'
             = l evento.fecha, format: :supershort
       - else
         .item
+          - if @lista_evento_viernes
+            = link_to 'Mi lista', lista_path(@lista_evento_viernes), class: 'btn-default yo-voy'
+          - else
+            = link_to 'Hacer lista', new_evento_lista_path(evento), class: 'btn-default yo-voy'
           = image_tag evento.flyer_url(:full)
           %h3.title
             = '+ ' + evento.titulo + ' /'
             = l evento.fecha, format: :supershort
-
-  -#
-    = link_to content_tag(:span, '', class: 'icon-prev'), '#carousel-generic', :'data-evento' => 'prev'
-    = link_to content_tag(:span, '', class: 'icon-next'), '#carousel-generic', :'data-evento' => 'next'

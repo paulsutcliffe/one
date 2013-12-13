@@ -1,0 +1,20 @@
+- content_for :javascript do
+  = javascript_include_tag 'nested_form.js'
+
+- page_title!('Creando lista')
+
+#region-listas.container
+
+  .region
+    .region-title
+      %h1
+        Creando
+        %b
+          lista
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

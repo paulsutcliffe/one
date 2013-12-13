@@ -14,5 +14,6 @@
         = evento.titulo
         = evento.fecha
         - if current_admin
-          %td= link_to 'Editar', edit_evento_path(evento), class: 'btn btn-success'
-          %td= link_to 'Eliminar', evento, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+          = link_to 'Listas', evento_listas_path(evento), class: 'btn btn-primary'
+          = link_to 'Editar', edit_evento_path(evento), class: 'btn btn-success'
+          = link_to 'Eliminar', evento, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

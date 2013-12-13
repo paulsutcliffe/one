@@ -7,6 +7,7 @@ ActiveSupport::Inflector.inflections do |inflect|
 #   inflect.singular /^(ox)en/i, '\1'
   inflect.irregular 'error', 'errores'
   inflect.irregular 'auspiciador', 'auspiciadores'
+  inflect.irregular 'lista', 'listas'
 #   inflect.uncountable %w( fish sheep )
 end
 #

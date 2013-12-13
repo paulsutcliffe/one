@@ -1,0 +1,15 @@
+#region-listas.container
+  .region
+    .region-title
+      %h1= page_title!('lista')
+
+  .region
+    %ol
+      - @lista.invitados.each do |invitado|
+        %li= invitado.nombre
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_lista_path(@evento, @lista), class: 'btn btn-success'
+    = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

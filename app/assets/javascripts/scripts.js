@@ -3,11 +3,11 @@ $(document).ready(function() {
 
   $(document).on('click', '.menu-principal a', function() {
     $('html, body').animate({scrollTop: $(this.hash).offset().top - 90})
-    return false; 
+    return false;
   });
 
   $('body').scrollspy({ target: '.menu-principal-wrapper', offset: 100 })
-  
+
   header_class();
   if_window_gt_1500();
 });
@@ -40,10 +40,35 @@ function if_window_gt_1500() {
     row.addClass('row');
   } else {
     cont.removeClass('container');
-    row.removeClass('row');    
-  } 
+    row.removeClass('row');
+  }
 }
 
 $(document).on('resize', function() {
   if_window_gt_1500();
 });
+
+
+$(function() {
+  var fieldsCount,
+      maxFieldsCount = 4,
+      $addLink = $('a.add_nested_fields');
+
+  function toggleAddLink() {
+    $addLink.toggle(fieldsCount <= maxFieldsCount)
+  }
+
+  $(document).on('nested:fieldAdded', function() {
+    fieldsCount += 1;
+    toggleAddLink();
+  });
+
+  $(document).on('nested:fieldRemoved', function() {
+    fieldsCount -= 1;
+    toggleAddLink();
+  });
+
+  // count existing nested fields after page was loaded
+  fieldsCount = $('form .fields').length;
+  toggleAddLink();
+})

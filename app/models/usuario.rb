@@ -6,6 +6,9 @@ class Usuario < ActiveRecord::Base
 
   devise :omniauthable, :omniauth_providers => [:facebook]
 
+  has_many :listas
+  has_many :eventos, :through => :listas
+
   default_scope  { order("created_at DESC") }
 
   # Setup accessible (or protected) attributes for your model

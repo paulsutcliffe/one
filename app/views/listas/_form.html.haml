@@ -1,0 +1,23 @@
+= nested_form_for [@evento, @lista], :html => { class: 'form-horizontal', role: 'form', data: { 'max-fields' => 5 } } do |f|
+  = f.hidden_field :usuario_id, value: current_usuario.id
+  - if @lista.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@lista.errors.count, "error")}"
+      %ul
+        - @lista.errors.full_messages.each do |msg|
+          %li= msg
+  %span.help-block
+    Llena los nombres de tus invitados, un nombre en cada casilla.
+  = f.fields_for :invitados do |invitado_form|
+    .form-group
+      = invitado_form.label :nombre, class: 'col-sm-2 control-label'
+      .col-sm-8
+        = invitado_form.text_field :nombre, class: 'form-control'
+      .col-sm-2
+        = invitado_form.link_to_remove "Eliminar", class: 'btn btn-danger'
+  .form-group
+    .col-sm-10
+      = f.link_to_add "Agregar Invitado", :invitados, class: 'btn btn-primary'
+
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'
