@@ -6,4 +6,5 @@ class Lista < ActiveRecord::Base
   has_many :invitados
 
   accepts_nested_attributes_for :invitados, limit: 5
+
 end

@@ -7,4 +7,10 @@ class Evento < ActiveRecord::Base
   has_many :usuarios, :through => :listas
 
   mount_uploader :flyer, FlyerUploader
+
+  def usuario_tiene_lista(usuario)
+    if usuario
+      self.listas.includes(:usuario)
+    end
+  end
 end

@@ -1,15 +1,18 @@
 #region-listas.container
   .region
     .region-title
-      %h1= page_title!('lista')
+      %h1= page_title!('Lista de invitados')
 
   .region
+    %h2= @evento.titulo
+    %br
     %ol
       - @lista.invitados.each do |invitado|
         %li= invitado.nombre
 
   .region
-    - if current_admin
+    - if current_usuario
       .admin-controls
-        = link_to 'Editar', edit_lista_path(@evento, @lista), class: 'btn btn-success'
+        = link_to 'Editar', edit_evento_lista_path(@evento, @lista), class: 'btn btn-success'
+        = link_to 'Cancelar mi lista', @lista, method: :delete, class: 'btn btn-danger'
     = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'
