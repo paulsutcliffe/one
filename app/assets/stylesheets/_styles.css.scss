@@ -150,3 +150,5 @@ textarea {resize: vertical; height: 160px; min-height: 160px}
 }
 .btn-default.yo-voy {position: absolute; top: 15px; right: 30px; z-index: 200}
 
+
+.footer-item-inner {margin-left: 20px; @include inline-block}

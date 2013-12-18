@@ -136,9 +136,10 @@
 #main-footer.region-section
   .copyright
     = 'ONE by Bach Todos los Derechos Reservados ' + Time.now.year.to_s
-  .twitter-like.footer-item
-    = render '/shared/twitter_follow'
-  .facebook-like.footer-item
-    = render '/shared/like_buttom'
+  .footer-item.social
+    .footer-item-inner
+      = render '/shared/twitter_follow'
+    .footer-item-inner
+      = render '/shared/like_buttom'
   .logo-facebook.footer-item
     = image_tag '/assets/logo-facebook.png'
