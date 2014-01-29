@@ -5,7 +5,7 @@
   - else
     - if current_usuario
       %li
-        = link_to 'mis listas', usuario_listas_path(current_usuario)
+        =# link_to 'mis listas', usuario_listas_path(current_usuario)
       |
       %li
         = link_to 'cerrar sesión', destroy_usuario_session_path, method: 'delete', id: 'sign_out'
