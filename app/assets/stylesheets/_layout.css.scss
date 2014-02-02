@@ -1,22 +1,20 @@
 
 
 
-
-.seccion {
+.seccion{
   @extend .col-lg-12;
   @extend .col-md-12;
   @extend .col-sm-12;
   @extend .col-xs-12;
 }
 
-.seccion {
- .region-texto {
-
- }
- .region-media {
-   
- }
+.seccion-logo {
+  @extend .col-lg-9;
+  @extend .col-md-9;
+  @extend .col-sm-9;
+  @extend .col-xs-9;
 }
+
 
 [id^="region-"],[class^="seccion-"], .region-section {
   @extend .clearfix;
@@ -24,9 +22,6 @@
 
 .region-menu {margin-bottom: 5px}
 .region-devise {margin-bottom: 30px}
-[id^="region-"], .region-section {
-  margin-bottom: 160px;
-}
 
 .region-media {
   .foto {
@@ -34,6 +29,12 @@
   }
 }
 
+.mega-container.facebook{
+background: url(background-slider.png) repeat-x center bottom;
+max-height:300px;
+padding-top:25px;
+padding-bottom:30px;
+}
 #main-header.sticky {
   .region-logo {
     @extend .col-lg-3;
@@ -75,10 +76,10 @@
 
 #region-slider {
   .region-carousel {
-    @extend .col-lg-9;
-    @extend .col-md-9;
-    @extend .col-sm-9;
-    @extend .col-xs-9;
+    @extend .col-lg-12;
+    @extend .col-md-12;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
   }
 
   .region-flyers {
@@ -91,23 +92,16 @@
 
 #region-auspiciadores {
   .item-aus-wrapper {
-    @extend .col-lg-10;
-    @extend .col-md-10;
-    @extend .col-sm-10;
-    @extend .col-xs-10;
-
-    @extend .col-lg-offset-2;
-    @extend .col-md-offset-2;
-    @extend .col-sm-offset-2;
-    @extend .col-xs-offset-2;
-
+    @extend .col-lg-12;
+    @extend .col-md-12;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
   }
   .item-aus {
     @extend .col-lg-2;
     @extend .col-md-2;
-    @extend .col-sm-6;
+    @extend .col-sm-4;
     @extend .col-xs-6;
-    float: right;
     img {width: 100%}
   }
 }
@@ -118,13 +112,13 @@
     @extend .col-lg-4;
     @extend .col-md-4;
     @extend .col-sm-4;
-    @extend .col-xs-4;
+    @extend .col-xs-12;
   }
   .item-foto {
     @extend .col-lg-2;
     @extend .col-md-2;
     @extend .col-sm-2;
-    @extend .col-xs-2;
+    @extend .col-xs-3;
   }
 
   .item-tab {
@@ -138,7 +132,7 @@
     @extend .col-lg-6;
     @extend .col-md-6;
     @extend .col-sm-6;
-    @extend .col-xs-6;
+    @extend .col-xs-12;
   }
 
   .item-flyers {
@@ -193,7 +187,8 @@
   }
 
 }
-
+.if-mega-container{width: 100%; background: url('/assets/background-general.jpg') repeat-x center bottom;}
+.mega-container{max-width: 100%;}
 #contacto {
   .region-contact-info {
     @extend .col-lg-4;
@@ -221,4 +216,26 @@
     @extend .col-xs-6;
   }
 
+}
+.mega-container{
+margint-top: 50px;
+     padding-top: 50px;
+}
+
+.section-back{
+  background: url("/assets/background-section.png") repeat-x center bottom;
+  min-height: 300px;
+}
+.mega-container.slider-aus {
+    background: url("/assets/background-slider.png") repeat-x scroll center top rgba(0, 0, 0, 0);
+  }
+
+.section-front{
+min-height: 300px;
+}
+.ubicacion.section-front{
+min-height: 500px;
+}
+.baila.section-back{
+min-height: 400px;
 }

@@ -1,5 +1,5 @@
-body, h1, h2, h3, h4, h5, h6, a {font-family: 'Montserrat', sans-serif; font-size: 14px; color: white; font-weight: 400; line-height: 145%}
+body, h1, h2, h3, h4, h5, h6, a {font-family: 'Montserrat', sans-serif; font-size: 14px; color: $gray; font-weight: 400; line-height: 145%}
 a { &:hover { @include transition( all 0.3s ease-out ); } }
-
+p {color: $light-gray;}
 
 h1, h2, h3, h4, h5, h6 {margin: 0; line-height: 120%}

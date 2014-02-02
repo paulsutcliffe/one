@@ -1,145 +1,161 @@
 - page_title!('Inicio')
 
-
-#region-slider
-  .region-carousel
-    = render 'bootstrap3_carousel'
-  .region-flyers
-    - @eventos.each do |evento|
-      .flyer
-        = link_to image_tag(evento.flyer_url(:thumb), class: 'img-responsive')
-        %h3.title
-          = '+ ' + evento.titulo + ' / '
-          = l evento.fecha, format: :supershort
-
-
-#region-auspiciadores.seccion.region-centro
-  .region.item-aus-wrapper
-    .row
-      - @auspiciadores.each do |auspiciador|
-        .item-aus
-          = link_to image_tag(auspiciador.logo_url(:thumb), class: 'img-responsive'), auspiciador.link, target: '_blank'
-
-#region-baila.media-region
-  .item-texto
-    %h2.titulo
-      Baila
-    %p
-      "ONE" by Bach nace de la principal inspiración de un grupo profesional
-      de jóvenes dedicados al negocio del entretenimiento los cuales a través
-      de 8 años de experiencia han llegado a posicionar la marca "BACH"
-      como la mejor opción en discotecas del sur chico. Para este verano
-      presentaremos una propuesta innovadora de disco-club al lado
-      de nuestro "main-room", la cual ha sido diseñada estratégicamente para
-      ofrecer un mejor confort a todos los clientes brindando nuevos
-      conceptos de fiestas, conciertos y espacios privados.
-
-  .item-foto
-    = image_tag '/assets/img-baila1.jpg', class: 'img-responsive'
-  .item-foto
-    = image_tag '/assets/img-baila2.jpg', class: 'img-responsive'
-  .item-foto
-    = image_tag '/assets/img-baila3.jpg', class: 'img-responsive'
+.mega-container.slider-aus
+  .container
+    #region-slider
+      .region-carousel
+        = render 'bootstrap3_carousel'
+    -#.region-flyers
+      - @eventos.each do |evento|
+        .flyer
+          = link_to image_tag(evento.flyer_url(:thumb), class: 'img-responsive')
+          %h3.title
+            = '+ ' + evento.titulo + ' / '
+            = l evento.fecha, format: :supershort
 
 
-%section#la-discoteca.region-section.media-region
-  .item-foto.item-tab
-    = image_tag '/assets/img-discoteca1.jpg', class: 'img-responsive'
-  .item-foto
-    = image_tag '/assets/img-discoteca2.jpg', class: 'img-responsive'
-  .item-foto
-    = image_tag '/assets/img-discoteca3.jpg', class: 'img-responsive'
+    #region-auspiciadores.seccion.region-centro
+      .region.item-aus-wrapper
+        .row
+          - @auspiciadores.each do |auspiciador|
+            .item-aus
+              = link_to image_tag(auspiciador.logo_url(:thumb), class: 'img-responsive'), auspiciador.link, target: '_blank'
 
-  .item-texto
-    %h2.titulo
-      La Discoteca
-    %p
-      Far far away, behind the word mountains, far from the countries Vokalia
-      and Consonantia, there live the blind texts. Separated they live in
-      Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+.mega-container.baila.section-back
+  .container
+    #region-baila.media-region
+      .item-texto
+        %h2.titulo
+          Baila
+        %p
+          "ONE" by Bach nace de la principal inspiración de un grupo profesional
+          de jóvenes dedicados al negocio del entretenimiento los cuales a través
+          de 8 años de experiencia han llegado a posicionar la marca "BACH"
+          como la mejor opción en discotecas del sur chico. Para este verano
+          presentaremos una propuesta innovadora de disco-club al lado
+          de nuestro "main-room", la cual ha sido diseñada estratégicamente para
+          ofrecer un mejor confort a todos los clientes brindando nuevos
+          conceptos de fiestas, conciertos y espacios privados.
 
+      .item-foto.baila
+        = image_tag '/assets/img-baila1.jpg', class: 'img-responsive'
+      .item-foto.baila
+        = image_tag '/assets/img-baila2.jpg', class: 'img-responsive'
+      .item-foto.baila
+        = image_tag '/assets/img-baila3.jpg', class: 'img-responsive'
 
-#region-musica.media-region
-  .item-texto
-    %h2.titulo
-      La Música
-    %p
-      Far far away, behind the word mountains, far from the countries Vokalia
-      and Consonantia, there live the blind texts. Separated they live in
-      Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-  .item-iframe
-    == <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/124453914&amp;color=ff0000&amp;auto_play=false&amp;show_artwork=false"></iframe>
+.mega-container.musica-disco.section-front
+  .container
+    %section#la-discoteca.region-section.media-region
+      .item-foto.item-tab
+        = image_tag '/assets/img-discoteca1.jpg', class: 'img-responsive'
+      .item-foto
+        = image_tag '/assets/img-discoteca2.jpg', class: 'img-responsive'
+      .item-foto
+        = image_tag '/assets/img-discoteca3.jpg', class: 'img-responsive'
 
--# #region-eventos-anteriores.media-region
-
-  .item-flyers.item-tab
-    .row
-      .item-flyer
-        = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
-        %h3.title
-          + Fiesta de Inaguración
-      .item-flyer
-        = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
-        %h3.title
-          + Fiesta de Inaguración
-      = link_to 'Ver más', '', class: 'btn-default'
-
-  .item-texto
-    %h2.titulo
-      Eventos Anteriores
-    %p
-      Far far away, behind the word mountains, far from the countries Vokalia
-      and Consonantia, there live the blind texts. Separated they live in
-      Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-
-%section#contacto.region-section
-  %address.region-contact-info
-    %h2.titulo
-      Contacto
-    %ul
-      %li
-        info@onebybach.com
-        %i.icon.avion
-      %li
-        437.6825
-        %i.icon.iphone
-
-  .region-form
-    = render '/contactos/form'
-
-%section#ubicacion.region-section
-  .item-mapa
-    = render 'mapa'
-  .item-texto
-    %h2.titulo
-      Ubicación
-    %ul
-      %li
-        %i.icon.mapa
-        Km. 52 Antigua Panamericana Sur
-        San Bartolo (Al costado de Bach)
-
-      %li
-        %i.icon.persona
-        Mayores de 21 años
-
-      %li
-        %i.icon.tarjeta
-        Aceptamos Visa y MasterCard
+      .item-texto
+        %h2.titulo
+          La Discoteca
+        %p
+          Far far away, behind the word mountains, far from the countries Vokalia
+          and Consonantia, there live the blind texts. Separated they live in
+          Bookmarksgrove right at the coast of the Semantics, a large language ocean.
 
 
-#region-facebook.seccion.region-centro
-  #region-facebook
-    = render '/shared/facebook_js'
-    = render '/shared/facebook_like_box'
+.mega-container.section-back
+  .container
+    #region-musica.media-region
+      .item-texto
+        %h2.titulo
+          La Música
+        %p
+          Far far away, behind the word mountains, far from the countries Vokalia
+          and Consonantia, there live the blind texts. Separated they live in
+          Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+      .item-iframe
+        == <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/124453914&amp;color=ff0000&amp;auto_play=false&amp;show_artwork=false"></iframe>
+
+    -# #region-eventos-anteriores.media-region
+
+      .item-flyers.item-tab
+        .row
+          .item-flyer
+            = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
+            %h3.title
+              + Fiesta de Inaguración
+          .item-flyer
+            = image_tag '/assets/img-flyer-mini.jpg', class: 'img-responsive'
+            %h3.title
+              + Fiesta de Inaguración
+          = link_to 'Ver más', '', class: 'btn-default'
+.mega-container.eventos-contactos.section-front
+  .container
+    %section#eventos-antiguos.region-section.media-region
+      .item-foto.item-tab
+        = image_tag '/assets/img-discoteca1.jpg', class: 'img-responsive'
+      .item-foto
+        = image_tag '/assets/img-discoteca2.jpg', class: 'img-responsive'
+      .item-foto
+        = image_tag '/assets/img-discoteca3.jpg', class: 'img-responsive'
+
+      .item-texto
+        %h2.titulo
+          Eventos Anteriores
+        %p
+          Far far away, behind the word mountains, far from the countries Vokalia
+          and Consonantia, there live the blind texts. Separated they live in
+          Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+
+.mega-container.section-back
+  .container
+    %section#contacto.region-section
+      %address.region-contact-info
+        %h2.titulo
+          Contacto
+        %ul
+          %li
+            %i.icon.avion
+            %span 
+              info@onebybach.com
+          %li
+            %i.icon.iphone
+            %span
+              437.6825
+      .region-form
+        = render '/contactos/form'
+
+.mega-container.ubicacion.section-front
+  .container
+    %section#ubicacion.region-section
+      .item-mapa
+        = render 'mapa'
+        = image_tag '/assets/map-shadow.png', class: 'map-shadow img-responsive'
+
+      .item-texto
+        %h2.titulo
+          Ubicación
+        %ul
+          %li
+            %i.icon.mapa
+            Km. 52 Antigua Panamericana Sur
+            San Bartolo (Al costado de Bach)
+
+          %li
+            %i.icon.persona
+            Mayores de 21 años
+
+          %li
+            %i.icon.tarjeta
+            Aceptamos Visa y MasterCard
+
+.mega-container.facebook
+  .container
+    #region-facebook.seccion.region-centro
+      #region-facebook
+        = render '/shared/facebook_js'
+        = render '/shared/facebook_like_box'
 
 #main-footer.region-section
   .copyright
     = 'ONE by Bach Todos los Derechos Reservados ' + Time.now.year.to_s
-  .footer-item.social
-    .footer-item-inner
-      = render '/shared/twitter_follow'
-    .footer-item-inner
-      = render '/shared/like_buttom'
-  .logo-facebook.footer-item
-    = image_tag '/assets/logo-facebook.png'

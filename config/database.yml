@@ -4,8 +4,7 @@ defaults: &defaults
   reconnect: false
   pool: 5
   username: root
-  password: chimpance99
-
+  password: ze3anEnF
 development:
   database: one_development
   socket: /tmp/mysql.sock

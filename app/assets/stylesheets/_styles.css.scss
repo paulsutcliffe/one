@@ -7,11 +7,11 @@ header {
     text-transform: uppercase;
     line-height: 145%;
     a {
-      color: red;
+      color: $gray;
       font-weight: 700;
       font-size: 26px;
       text-transform: uppercase;
-      &:hover { text-decoration: none; color: white; }
+      &:hover { text-decoration: none; color: $light-gray; }
     }
   }
   .region-devise {
@@ -22,15 +22,15 @@ header {
     }
   }
   li a {
-    &:hover { color: red; text-decoration: none; }
+    &:hover { color: $gray; text-decoration: none; }
   }
 }
 
 body {
-  background-color: #000;
+  background-color: #f0f0f0; 
 }
 
-a:hover, a:focus {color: $red; }
+a:hover, a:focus {color: $gray; }
 
 
 h2.titulo {
@@ -51,9 +51,10 @@ h2.titulo {
 
 .menu-principal, .menu-devise {margin: 0; padding: 0}
 #main-footer.region-section {
-  margin-bottom: 0px; float: left; clear: left; width: 100%; padding-bottom: 20px;
+  height: 50px; float: left; clear: left; width: 100%; padding-bottom: 20px;bottom: 0;margin-top:20px;
 }
 
+.map-shadow{margin-top: -22px;}
 #region-musica,
 #region-baila {
   .item-texto {
@@ -62,6 +63,14 @@ h2.titulo {
     }
   }
 }
+
+#contacto.region-section{
+span{
+margin-top:20px;
+}
+}
+#main-header.sticky{background: url('/assets/background-general.jpg');}
+
 .nav-tabs {border-bottom: 0}
 .nav-tabs > li > a {
   border-radius: 0; border: 0; background: transparent
@@ -71,7 +80,7 @@ h2.titulo {
 }
 .nav-tabs > li.active > a, 
 .nav-tabs > li.active > a:hover, 
-.nav-tabs > li.active > a:focus {background-color: transparent; border: 0; color: white}
+.nav-tabs > li.active > a:focus {background-color: transparent; border: 0; color: $light-gray;}
 
 .nav > li > a:hover, .nav > li > a:focus {background-color: transparent}
 
@@ -82,11 +91,26 @@ h3.title {text-transform: uppercase; padding: 10px 0 20px; font-size: 18px}
 #one {@extend .clearfix}
 #main-header {@extend .clearfix /*position: fixed*/}
 #main-header.sticky {position: fixed; top: 0; left: 0; width: 100%; z-index: 300; 
-  background: black; height: 80px; border-bottom: 1px solid white;
+  background: url('/assets/background-general.jpg') repeat-x ; height: 80px; border-bottom: 1px solid white;
   .region-logo img {padding-top: 0; padding-bottom: 0; width: 200px}
   nav {margin-top: 10px}  
   .region-devise {margin-bottom: 0}
 }
+.social{float:right;}
+
+
+.sticky{
+  .logo{
+      float:left;
+      width: 130px !important;
+  }
+  .region-menu {
+    margin-bottom: 26px;
+      margin-left: 40px;
+        padding-top: 10px;
+          width: 60%;
+      }
+    }
 
 #main.under-sticky {margin-top: 367px}
 
@@ -113,6 +137,19 @@ $icons-sprite-dimensions: true;
   }
 }
 
+.slider{
+margin-left: 55px;
+z-index: 20;
+}
+.shadow{
+margin-top:-334px;
+z-index: 5;
+}
+.region-carousel{
+
+}
+
+
 #ubicacion {
   i.icon {
     display: block; margin-right: 10px;
@@ -124,9 +161,12 @@ $icons-sprite-dimensions: true;
 
 #carousel-generic {
   .carousel-indicators {
-    text-align: right; 
-    margin: 0; position: absolute; bottom: 20px; right: 0; width: auto;
+    margin: 0; position: absolute; bottom: 0px; width: auto;
   }
+}
+
+.baila{
+margin-top: 60px;
 }
 
 .form-inline .form-group {margin-bottom: 15px}
