@@ -3,8 +3,10 @@ defaults: &defaults
   encoding: utf8
   reconnect: false
   pool: 5
-  username: root
-  password: ze3anEnF
+username: root
+-# password: ze3anEnF
+password: chimpance99
+
 development:
   database: one_development
   socket: /tmp/mysql.sock
