@@ -3,9 +3,8 @@ defaults: &defaults
   encoding: utf8
   reconnect: false
   pool: 5
-username: root
-password: ze3anEnF
--#password: chimpance99
+  username: root
+  password: 8JNWU1wj
 
 development:
   database: one_development
