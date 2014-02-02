@@ -4,8 +4,8 @@ defaults: &defaults
   reconnect: false
   pool: 5
 username: root
--# password: ze3anEnF
-password: chimpance99
+password: ze3anEnF
+-#password: chimpance99
 
 development:
   database: one_development
