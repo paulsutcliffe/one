@@ -66,10 +66,15 @@ h2.titulo {
 
 #contacto.region-section{
 span{
-margin-top:20px;
+display:inline-block;
+margin-top:10px;
 }
 }
 #main-header.sticky{background: url('/assets/background-general.jpg');}
+
+.region-contact-info > ul {
+    padding-left: 0;
+  }
 
 .nav-tabs {border-bottom: 0}
 .nav-tabs > li > a {
@@ -96,13 +101,27 @@ h3.title {text-transform: uppercase; padding: 10px 0 20px; font-size: 18px}
   nav {margin-top: 10px}  
   .region-devise {margin-bottom: 0}
 }
-.social{float:right;}
 
-
+.titulo{
+margin-top:30px;
+}
+.social{
+float:right;
+margin-top:40px;
+}
+.sticky{
+  .social{
+  margin-top:10px;
+  }
+}
+.logo{
+  display: inline-block;
+    width: 300px;
+}
 .sticky{
   .logo{
       float:left;
-      width: 130px !important;
+      width: 110px !important;
   }
   .region-menu {
     margin-bottom: 26px;
@@ -135,10 +154,13 @@ $icons-sprite-dimensions: true;
     &.iphone {@include icons-sprite(iphone)}
     &.ubicacion {@include icons-sprite(ubicacion)}
   }
+  .titulo{
+    margin-top: 0px;
+  }
 }
 
 .slider{
-margin-left: 55px;
+margin-left: 57px;
 z-index: 20;
 }
 .shadow{
@@ -148,7 +170,13 @@ z-index: 5;
 .region-carousel{
 
 }
+.carousel-inner{
 
+ght: 500px;
+    overflow: hidden;
+      position: relative;
+        width: 100%;
+          z-index: 3;}
 
 #ubicacion {
   i.icon {
@@ -157,12 +185,47 @@ z-index: 5;
     &.persona {@include icons-sprite(persona)}
     &.tarjeta {@include icons-sprite(tarjeta)}
   }
+
+  .item-texto{
+    ul li{
+      color: $light-gray;
+    }
+  }
+}
+
+#contacto{
+  ul li{
+    color: $light-gray;
+  }
+
 }
 
 #carousel-generic {
   .carousel-indicators {
-    margin: 0; position: absolute; bottom: 0px; width: auto;
+    background-image: url("/assets/background-slider-boton.png");
+        background-position: center top;
+            background-repeat: no-repeat;
+                bottom: 0;
+                    height: 120px;
+                    margin-left:0px;        
+                    padding-top: 30px;
+                                position: relative;
+                                    width: 100%;
+                                        z-index: 2;
+                                        left:0px;
+  li{
+    background-image: url('/assets/img-boton.jpg');
+    border: 1px solid #757575;
   }
+  .active{
+    background-color: #757575;
+    background-image: url('/assets/img-boton-activo.png');
+  }  
+}
+
+.carousel-inner{
+margin-bottom: -34px;
+}
 }
 
 .baila{
@@ -174,9 +237,9 @@ textarea {resize: vertical; height: 160px; min-height: 160px}
 
 
 .btn-default {
-  background: $red; border: 0; text-align: center; border-radius: 0; 
+  background: $green; border: 0; text-align: center; border-radius: 5px; 
   padding: 7px 20px; color: white; text-shadow: 0 0 0 none; text-transform: uppercase;
-  &:hover, &:focus {background: darken($red, 5%); text-decoration: none; color: white}
+  &:hover, &:focus {background: darken($green, 5%); text-decoration: none; color: white}
 }
 
 .item-flyer,

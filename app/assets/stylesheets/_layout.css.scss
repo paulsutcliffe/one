@@ -53,10 +53,10 @@ padding-bottom:30px;
 
 #main-footer {
   .copyright {
-    @extend .col-lg-5;
-    @extend .col-md-5;
-    @extend .col-sm-5;
-    @extend .col-xs-5;
+    @extend .col-lg-12;
+    @extend .col-md-12;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
   }
   .footer-item {
     @extend .col-lg-2;
@@ -102,7 +102,9 @@ padding-bottom:30px;
     @extend .col-md-2;
     @extend .col-sm-4;
     @extend .col-xs-6;
-    img {width: 100%}
+    img {
+    margin-top: 20px;
+    width: 100%}
   }
 }
 
@@ -129,9 +131,9 @@ padding-bottom:30px;
   }
 
   .item-iframe {
-    @extend .col-lg-6;
-    @extend .col-md-6;
-    @extend .col-sm-6;
+    @extend .col-lg-8;
+    @extend .col-md-8;
+    @extend .col-sm-8;
     @extend .col-xs-12;
   }
 
@@ -165,7 +167,7 @@ padding-bottom:30px;
     @extend .col-lg-4;
     @extend .col-md-4;
     @extend .col-sm-4;
-    @extend .col-xs-4;
+    @extend .col-xs-12;
 
     ul {
       padding: 0; li {list-style: none; overflow: hidden; margin-bottom: 15px; i {float: left}}
@@ -173,15 +175,14 @@ padding-bottom:30px;
   }
 
   .item-mapa {
-    @extend .col-lg-6;
-    @extend .col-md-6;
-    @extend .col-sm-6;
-    @extend .col-xs-6;
+    @extend .col-lg-7;
+    @extend .col-md-7;
+    @extend .col-sm-7;
+    @extend .col-xs-12;
 
-    @extend .col-lg-offset-2;
-    @extend .col-md-offset-2;
-    @extend .col-sm-offset-2;
-    @extend .col-xs-offset-2;
+    @extend .col-lg-offset-1;
+    @extend .col-md-offset-1;
+    @extend .col-sm-offset-1;
     
     img {width: 100%}
   }
@@ -194,7 +195,7 @@ padding-bottom:30px;
     @extend .col-lg-4;
     @extend .col-md-4;
     @extend .col-sm-4;
-    @extend .col-xs-4;
+    @extend .col-xs-12;
 
     * {
       text-align: right;
@@ -203,10 +204,10 @@ padding-bottom:30px;
   }
 
   .region-form {
-    @extend .col-lg-6;
-    @extend .col-md-6;
-    @extend .col-sm-6;
-    @extend .col-xs-6;
+    @extend .col-lg-8;
+    @extend .col-md-8;
+    @extend .col-sm-8;
+    @extend .col-xs-12;
   }
 
   fieldset {
@@ -225,6 +226,7 @@ margint-top: 50px;
 .section-back{
   background: url("/assets/background-section.png") repeat-x center bottom;
   min-height: 300px;
+  padding-bottom: 35px;
 }
 .mega-container.slider-aus {
     background: url("/assets/background-slider.png") repeat-x scroll center top rgba(0, 0, 0, 0);
