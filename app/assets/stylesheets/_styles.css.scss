@@ -168,14 +168,24 @@ margin-top:-336px;
 z-index: 5;
 }
 .auspiciador{
+ background-color: #F0F0F0;
+color: #ADACAC;
+margin: 0 auto;
+width: 36%;
+margin-top:0px;
+margin-bottom: 0px;
 text-align: center;
 }
+.item-aus-wrapper{
+background-image: url(/assets/aus-line.png);
+background-repeat: repeat-x;
+background-position: center;
+}
+
 .region-carousel{
 
 }
 .carousel-inner{
-
-ght: 500px;
     overflow: hidden;
       position: relative;
         width: 100%;
