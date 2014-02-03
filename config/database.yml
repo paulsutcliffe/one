@@ -4,7 +4,7 @@ defaults: &defaults
   reconnect: false
   pool: 5
   username: root
-  password: chimpance99
+  password: 8JNWU1wj
 
 development:
   database: one_development
