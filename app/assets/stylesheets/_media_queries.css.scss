@@ -20,12 +20,18 @@
   .region-devise{
   width:100% !important;
   }
-} 
+}
 }
 #region-slider{
 .carousel-inner{
-min-height: 400px;
+min-height: 200px;
 }
+.carousel-indicators{
+background-image:none;
+}
+}
+.slider{
+margin-left: 0px;
 }
 }
 
@@ -59,6 +65,7 @@ font-size: 20px;
 }
 
 }
+@media (min-width: 320px) and (max-width: 568px) 
 @media(min-width: 992px) and (max-width: 1199px){
 .sticky .region-menu{
   margin-left: 0px;
