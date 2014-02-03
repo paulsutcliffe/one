@@ -65,7 +65,30 @@ font-size: 20px;
 }
 
 }
-@media (min-width: 320px) and (max-width: 568px) 
+@media (min-width: 361px) and (max-width: 568px){
+.slider{
+margin-left: 27px;
+    width: 89%;
+}
+.shadow{
+    margin-top: -160px;
+}
+#carousel-generic{
+  .carousel-indicators{
+  background-image:none;
+  }
+}
+.sticky{
+  .social{
+  display:none;
+  }
+  .region-menu{
+    width:75%;
+    .menu-principal a{font-size:20px;}
+  margin-left: 0px;
+  }
+}
+} 
 @media(min-width: 992px) and (max-width: 1199px){
 .sticky .region-menu{
   margin-left: 0px;

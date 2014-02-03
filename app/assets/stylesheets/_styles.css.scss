@@ -96,7 +96,7 @@ h3.title {text-transform: uppercase; padding: 10px 0 20px; font-size: 18px}
 #one {@extend .clearfix}
 #main-header {@extend .clearfix /*position: fixed*/}
 #main-header.sticky {position: fixed; top: 0; left: 0; width: 100%; z-index: 300; 
-  background: url('/assets/background-general.jpg') repeat-x ; height: 80px; border-bottom: 1px solid white;
+  background: url('/assets/background-general.jpg') repeat-x ; height: 100px; border-bottom: 1px solid white;
   .region-logo img {padding-top: 0; padding-bottom: 0; width: 200px}
   nav {margin-top: 10px}  
   .region-devise {margin-bottom: 0}
@@ -164,8 +164,11 @@ margin-left: 57px;
 z-index: 20;
 }
 .shadow{
-margin-top:-334px;
+margin-top:-336px;
 z-index: 5;
+}
+.auspiciador{
+text-align: center;
 }
 .region-carousel{
 
