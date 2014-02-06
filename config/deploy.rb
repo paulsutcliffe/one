@@ -4,7 +4,7 @@ require "rvm/capistrano"
 set :rvm_ruby_string, '2.1.0'
 set :rvm_type, :user  # Don't use system-wide RVM
 
-server "kosmyka.com", :web, :app, :db, primary: true
+server "198.211.117.250", :web, :app, :db, primary: true
 
 set :application, "one"
 set :user, "paul"
