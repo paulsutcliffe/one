@@ -37,7 +37,7 @@ class FlyerUploader < CarrierWave::Uploader::Base
   end
 
   version :full do
-    process :resize_to_fill => [1200, 444]
+    process :resize_to_fill => [940, 348]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
