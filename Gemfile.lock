@@ -110,7 +110,7 @@ GEM
     json (1.8.1)
     jwt (0.1.11)
       multi_json (>= 1.5)
-    kgio (2.8.1)
+    kgio (2.9.1)
     koala (1.8.0)
       addressable
       faraday
@@ -233,7 +233,7 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unicorn (4.8.1)
+    unicorn (4.8.2)
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
