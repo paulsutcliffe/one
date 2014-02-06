@@ -2,18 +2,17 @@
 
   .region
     .region-title
-      %h1= page_title!('Eventos')
+      %h1= page_title!('Flyers')
 
     .region
       - if current_admin
         .admin-control
-          = link_to 'Crear Evento', new_evento_path, class: 'btn btn-primary'
+          = link_to 'Crear Nuevo Flyer', new_evento_path, class: 'btn btn-primary'
     .region
       - @eventos.each do |evento|
         = link_to image_tag(evento.flyer_url(:full), class: 'img-responsive'), evento.link
         = evento.titulo
         = evento.fecha
         - if current_admin
-          = link_to 'Listas', evento_listas_path(evento), class: 'btn btn-primary'
           = link_to 'Editar', edit_evento_path(evento), class: 'btn btn-success'
           = link_to 'Eliminar', evento, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
