@@ -49,20 +49,21 @@
 .mega-container.musica-disco.section-front
   .container
     %section#la-discoteca.region-section.media-region
-      .item-foto
-        = image_tag '/assets/img-discoteca1.jpg', class: 'img-responsive'
-      .item-foto
-        = image_tag '/assets/img-discoteca2.jpg', class: 'img-responsive'
-      .item-foto
-        = image_tag '/assets/img-discoteca3.jpg', class: 'img-responsive'
+      .space  
+        .item-foto
+          = image_tag '/assets/img-discoteca1.jpg', class: 'img-responsive'
+        .item-foto
+          = image_tag '/assets/img-discoteca2.jpg', class: 'img-responsive'
+        .item-foto
+          = image_tag '/assets/img-discoteca3.jpg', class: 'img-responsive'
 
-      .item-texto
-        %h2.titulo
-          La Discoteca
-        %p
-          Far far away, behind the word mountains, far from the countries Vokalia
-          and Consonantia, there live the blind texts. Separated they live in
-          Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+        .item-texto
+          %h2.titulo
+            La Discoteca
+          %p
+            Far far away, behind the word mountains, far from the countries Vokalia
+            and Consonantia, there live the blind texts. Separated they live in
+            Bookmarksgrove right at the coast of the Semantics, a large language ocean.
 
 
 .mega-container.section-back
@@ -94,62 +95,65 @@
 .mega-container.eventos-contactos.section-front
   .container
     %section#eventos-antiguos.region-section.media-region
-      .item-foto
-        = image_tag '/assets/img-discoteca1.jpg', class: 'img-responsive'
-      .item-foto
-        = image_tag '/assets/img-discoteca2.jpg', class: 'img-responsive'
-      .item-foto
-        = image_tag '/assets/img-discoteca3.jpg', class: 'img-responsive'
+      .space
+        .item-foto
+          = image_tag '/assets/img-discoteca1.jpg', class: 'img-responsive'
+        .item-foto
+          = image_tag '/assets/img-discoteca2.jpg', class: 'img-responsive'
+        .item-foto
+          = image_tag '/assets/img-discoteca3.jpg', class: 'img-responsive'
 
-      .item-texto
-        %h2.titulo
-          Eventos Anteriores
-        %p
-          Far far away, behind the word mountains, far from the countries Vokalia
-          and Consonantia, there live the blind texts. Separated they live in
-          Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+        .item-texto
+          %h2.titulo
+            Eventos Anteriores
+          %p
+            Far far away, behind the word mountains, far from the countries Vokalia
+            and Consonantia, there live the blind texts. Separated they live in
+            Bookmarksgrove right at the coast of the Semantics, a large language ocean.
 
 .mega-container.section-back
   .container
     %section#contacto.region-section
-      %address.region-contact-info
-        %h2.titulo
-          Contacto
-        %ul
-          %li
-            %i.icon.avion
-            %span 
-              info@onebybach.com
-          %li
-            %i.icon.iphone
-            %span
-              437.6825
-      .region-form
-        = render '/contactos/form'
+      .space
+        %address.region-contact-info
+          %h2.titulo
+            Contacto
+          %ul
+            %li
+              %i.icon.avion
+              %span 
+                info@onebybach.com
+            %li
+              %i.icon.iphone
+              %span
+                437.6825
+        .region-form
+          = render '/contactos/form'
 
 .mega-container.ubicacion.section-front
   .container
     %section#ubicacion.region-section
-      .item-mapa
-        = render 'mapa'
-        = image_tag '/assets/map-shadow.png', class: 'map-shadow img-responsive'
+      .space
+        .item-mapa
+          = render 'mapa'
+          = image_tag '/assets/map-shadow.png', class: 'map-shadow img-responsive'
 
-      .item-texto
-        %h2.titulo
-          Ubicación
-        %ul
-          %li
-            %i.icon.mapa
-            Km. 52 Antigua Panamericana Sur
-            San Bartolo (Al costado de Bach)
+        .item-texto
+          %h2.titulo
+            Ubicación
+          %ul
+            %li
+              %i.icon.mapa
+              Km. 52 Antigua Panamericana Sur
+              San Bartolo (Al costado de Bach)
 
-          %li
-            %i.icon.persona
-            Mayores de 21 años
+            %li
+              %i.icon.persona
+              Mayores de 21 años
 
-          %li
-            %i.icon.tarjeta
-            Aceptamos Visa y MasterCard
+            %li
+              %i.icon.tarjeta
+              Aceptamos Visa y MasterCard
 
 .mega-container.facebook
   .container
