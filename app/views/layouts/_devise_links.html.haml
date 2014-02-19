@@ -2,7 +2,7 @@
   - if current_admin
     %li
       = link_to 'cerrar sesión de administrador', destroy_admin_session_path, method: 'delete'
-  - else
+  -# else
     - if current_usuario
       %li
         =# link_to 'mis listas', usuario_listas_path(current_usuario)

@@ -2,7 +2,12 @@ $(document).ready(function() {
 
 
   $(document).on('click', '.menu-principal a', function() {
-    $('html, body').animate({scrollTop: $(this.hash).offset().top - 90})
+    if($('#main-header').hasClass('no-sticky')){
+      $('html, body').animate({scrollTop: $(this.hash).offset().top - 415}, 1700)
+    }
+    else{
+      $('html, body').animate({scrollTop: $(this.hash).offset().top - 90}, 900)
+    }   
     return false;
   });
 
@@ -24,10 +29,15 @@ function header_class() {
   if (dista > 400) {
     header.addClass('sticky');
     main.addClass('under-sticky');
+    header.removeClass('no-sticky');
+    main.removeClass('no-under-sticky');
   } else {
     header.removeClass('sticky');
+    header.addClass('no-sticky');
+    main.addClass('no-under-sticky');
     main.removeClass('under-sticky');
   }
+
 }
 
 
