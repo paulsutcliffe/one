@@ -11,7 +11,7 @@ $(document).ready(function() {
     return false;
   });
 
-  $('body').scrollspy({ target: '.menu-principal-wrapper', offset: 100 })
+  $('body').scrollspy({ target: '.menu-principal-wrapper', offset: 500 })
 
   header_class();
   if_window_gt_1500();
