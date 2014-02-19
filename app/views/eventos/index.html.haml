@@ -10,6 +10,9 @@
           = link_to 'Crear Nuevo Flyer', new_evento_path, class: 'btn btn-primary'
     .region
       - @eventos.each do |evento|
+        %br
+        %br
+        %br
         = link_to image_tag(evento.flyer_url(:full), class: 'img-responsive'), evento.link
         = evento.titulo
         = evento.fecha

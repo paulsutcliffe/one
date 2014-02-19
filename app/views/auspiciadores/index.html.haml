@@ -10,7 +10,10 @@
           = link_to 'Crear Auspiciador', new_auspiciador_path, class: 'btn btn-primary'
     .region
       - @auspiciadores.each do |auspiciador|
-        = image_tag auspiciador.logo_url(:thumb)
-        - if current_admin
-          = link_to 'Editar', edit_auspiciador_path(auspiciador), class: 'btn btn-success'
-          = link_to 'Eliminar', auspiciador, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+        .item-aus
+          = image_tag auspiciador.logo_url(:thumb)
+          %br
+          %br
+          - if current_admin
+            = link_to 'Editar', edit_auspiciador_path(auspiciador), class: 'btn btn-success'
+            = link_to 'Eliminar', auspiciador, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
