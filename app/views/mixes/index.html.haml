@@ -12,15 +12,13 @@
       .table-responsive
         %table.table
           %tr
-            %th Soundcloud link
-            %th
+            %th Soundcloud
             %th
             %th
 
           - @mixes.each do |mix|
             %tr
-              %td= mix.soundcloud_link
-              %td= link_to 'Ver', mix, class: 'btn btn-info'
+              %td= mix.soundcloud_link_html
               - if current_admin
                 %td= link_to 'Editar', edit_mix_path(mix), class: 'btn btn-success'
                 %td= link_to 'Eliminar', mix, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

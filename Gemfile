@@ -41,6 +41,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'koala'
 
+gem "auto_html"
 gem "nested_form"
 gem "bootstrap-sass", "~> 3.0.2.1"
 gem "sass-rails", "~> 3.2.6"

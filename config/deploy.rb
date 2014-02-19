@@ -7,6 +7,8 @@ set :rvm_type, :user  # Don't use system-wide RVM
 
 server "kosmyka.com", :web, :app, :db, primary: true
 
+set :keep_releases, 1
+
 set :application, "one"
 set :user, "paul"
 set :deploy_to, "/var/www/#{application}"
