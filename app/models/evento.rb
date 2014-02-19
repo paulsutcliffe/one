@@ -6,6 +6,8 @@ class Evento < ActiveRecord::Base
   has_many :listas
   has_many :usuarios, :through => :listas
 
+  validates :titulo, presence: true
+
   mount_uploader :flyer, FlyerUploader
 
   def usuario_tiene_lista(usuario)
