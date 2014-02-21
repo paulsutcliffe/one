@@ -3,7 +3,11 @@
 .social
   .footer-item-inner
     -#= render '/shared/twitter_follow'
-    = render '/shared/like_buttom'
+    .facebook-tag
+      = link_to ('https://www.facebook.com/pages/One-by-Bach/269407326541558?fref=ts'), :target => "_blank" do
+        %span 
+          S&Iacute;GUENOS
+        = image_tag image_path('icono-facebook.png')
 .seccion.region-menu.menu-principal-wrapper
   = render 'layouts/navigation_links'
   .seccion-logo.region-devise

@@ -269,5 +269,6 @@ textarea {resize: vertical; height: 160px; min-height: 160px}
 }
 .btn-default.yo-voy {position: absolute; top: 15px; right: 30px; z-index: 200}
 
-
+.facebook-tag span:hover, .facebook-tag a:hover {color: #ADACAC; text-decoration: none;}
+.facebook-tag span { vertical-align: middle; font-weight: bold; text-shadow: 0 1px 0 white;}
 .footer-item-inner {margin-left: 20px; @include inline-block}

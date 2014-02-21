@@ -1,4 +1,13 @@
+
 - page_title!(@eventos.first.titulo)
+- content_for :javascript do 
+  :javascript
+    $(document).ready(function() {
+      $('#carousel-generic').carousel({
+      interval: 2700,
+      wrap: true
+    });
+    });
 
 .mega-container.slider-aus
   .container
